@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона_каталог</title>
+    <title>HTML Academy: Седона каталог</title>
   </head>
   <body>
     <header class="main-header">
@@ -70,19 +70,19 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                  Бассейн
+                  <span>Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="parking-space" checked>
-                  Парковка
+                  <span>Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="Wi-Fi">
-                  Wi-Fi
+                  <span>Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -94,19 +94,19 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="hotel" checked>
-              Гостиница
+                  <span>Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="motel">
-              Мотель
+                  <span>Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="apartments">
-              Апартаменты
+                  <span>Апартаменты</span>
                 </label>
               </li>
             </ul>
@@ -114,11 +114,13 @@
 
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <label class="visually-hidden">Цена от
-                  <input class="cost-min-input" placeholder="от" type="number" value="0">
+              <label class="control">
+                  <input class="control-input" type="number" value="0">
+                  <span>от</span>
               </label>
-              <label class="visually-hidden">Цена до
-                  <input class="cost-max-input" placeholder="до" type="number" value="9000">
+              <label class="control">
+                  <input class="control-input" type="number" value="9000">
+                  <span>до</span>
               </label>
           </fieldset>
 
@@ -127,7 +129,7 @@
 
         </form>
 
-        <p class="catalog-filter-result">Найдено гостиниц:38</p>
+        <p class="catalog-filter-result">Найдено гостиниц: 38</p>
 
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
@@ -151,7 +153,8 @@
             <img class="product-card-image" src="images/hotels/hotel-1-Amara Resort & Spa.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa">
             <h3 class="product-card-title">Amara Resort & Spa</h3>
           </a>
-            <p>Гостиница<b class="product-card-price">От 4000 ₽</b></p>
+            <p class="product-card-description">Гостиница</p>
+            <p class="product-card-price">От 4000 ₽</p>
             <a class="product-card-link" href="product.html">Подробнее</a>
             <button class="favourites" type="button">В избранное</button>
             <p class="rating-star rating-star-4"><span class="visually-hidden">4 звезды</span></p>
@@ -162,7 +165,8 @@
             <img class="product-card-image" src="images/hotels/hotel-2-Villas at Poco Diablo.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo">
             <h3 class="product-card-title">Villas at Poco Diablo</h3>
           </a>
-            <p>Гостиница<b class="product-card-price">От 5000 ₽</b></p>
+            <p class="product-card-description">Гостиница</p>
+            <p class="product-card-price">От 5000 ₽</p>
             <a class="product-card-link" href="product.html">Подробнее</a>
             <button class="favourites favourites-added" type="button">В избранном</button>
             <p class="rating-star rating-star-4"><span class="visually-hidden">4 звезды</span></p>
@@ -173,7 +177,8 @@
             <img class="product-card-image" src="images/hotels/hotel-3-Desert Quail Inn.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn">
             <h3 class="product-card-title">Desert Quail Inn</h3>
           </a>
-            <p>Гостиница<b class="product-card-price">От 2500 ₽</b></p>
+            <p class="product-card-description">Гостиница</p>
+            <p class="product-card-price">От 2500 ₽</p>
             <a class="product-card-link" href="product.html">Подробнее</a>
             <button class="favourites" type="button">В избранное</button>
             <p class="rating-star rating-star-3"><span class="visually-hidden">3 звезды</span></p>
@@ -184,7 +189,8 @@
             <img class="product-card-image" src="images/hotels/hotel-4-GreenTree Inn.jpg" width="300" height="212" alt="Гостиница GreenTree Inn">
             <h3 class="product-card-title">GreenTree Inn</h3>
           </a>
-            <p>Гостиница<b class="product-card-price">От 1500 ₽</b></p>
+            <p class="product-card-description">Гостиница</p>
+            <p class="product-card-price">От 1500 ₽</p>
             <a class="product-card-link" href="product.html">Подробнее</a>
             <button class="favourites" type="button">В избранное</button>
             <p class="rating-star rating-star-2"><span class="visually-hidden">3 звезды</span></p>
@@ -217,8 +223,8 @@
 
       <section class="mailing">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p>Подпишитесь на рассылку</p>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="mailing-title">Подпишитесь на рассылку</p>
+        <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="mailing-email">Email</label>
           <input class="field"  placeholder="Ваш e-mail" type="email" name="mailing-email" id="mailing-email" required>
