@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+/* Кнопки */
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.hotel-search-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+.mailing-button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+.catalog-filter-button {
+  background-color: #82B3D3;
+}
+.delete-button {
+  background-color: rgba(131, 179, 211, 0);
+  border: 0;
+}
+.listing-type-button {
+  border: 2px solid #E5E5E5;
+}
+.listing-type-selected {
+  border: 2px solid #000000;
+}
+.favourites-button {
+  background-color: #82B3D3;
+}
+.favourites-added {
+  background-color: #7DB54F;
+}
+.pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+.pagination-more {
+  background-color: rgba(131, 179, 211, 0);
+  color: #000000;
+}
+/* Контейнер с тенью */
+.body-container {
+  background: #FFFFFF;
+  color: #333333;
+}
+/* Навигация */
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+/* Первый экран на главной */
+.main-container {
+  background-color: #D6E8F2;
+  background-image: url("../images/background-1-screen.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  height: 485px;
+}
+.main-decor {
+  background: url("../images/figure-1-screen.svg") no-repeat;
+  background-size: 100% auto;
+  height: 57px;
+}
+/* Преимущества */
+/* Выравнивание текста */
+.advantages {
+  text-align: center;
+}
+/* Заголовки блоков */
+.advantages-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Заголовки преимуществ */
+.advantages-title-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Убираем стили по умолчанию */
+.advantages-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Фон преимуществ */
+.advantages-list li:first-child {
+  background-color: #82B3D3;
+}
+.advantages-list li:last-child {
+  background-color: #82B3D3;
+}
+.advantages-list li:nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.advantages-list li:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+/* Рекомендации */
+/* Выравнивание текста */
+.recommendations {
+  text-align: center;
+}
+/* Заголовки блоков */
+.recommendations-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Заголовки преимуществ */
+.recommendations-title-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Убираем стили по умолчанию */
+.recommendations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Фон */
+.recommendations-list li:nth-child(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+/* Поиск отелей */
+/* Выравнивание текста */
+.hotel-search {
+  text-align: center;
+}
+/* Заголовки блоков */
+.hotel-search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Подписка на рассылку */
+/* Выравнивание текста */
+.mailing {
+  text-align: center;
+  background-color: #ffffff;
+  height: 415px;
+}
+.mailing-main {
+  background-color: #3B74A0;
+  color: #FFFFFF;
+  background-image: url("../images/background-mailing.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+/* Заголовки блоков */
+.mailing-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/* Каталог */
+.main-inner-container {
+  background-color: #3B74A0;
+  color: #FFFFFF;
+  background-image: url("../images/catalog-filter.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: left;
+}
+.inner-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #FFFFFF;
+}
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.catalog-filter-result {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Карточки */
+.product-card-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  color:  #000000;
+}
+.rating {
+  text-transform: uppercase;
+}
+/* Убираем стили по умолчанию */
+.product-list {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+.pagination {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+/* Футер */
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:  #000000;
+}
