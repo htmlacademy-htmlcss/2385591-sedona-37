@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="body-container">
-    <header class="main-header">
+    <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
           <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта Седона.">
@@ -45,8 +45,9 @@
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-container main-inner">
       <div class="main-inner-container">
+      <div class="main-inner-wrapper">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -64,10 +65,10 @@
       </header>
 
       <section class="catalog-products">
-        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -91,7 +92,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-group-house">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -115,7 +116,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-group-cost">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="control">
                   <input class="control-input" type="number" value="0">
@@ -127,12 +128,17 @@
               </label>
           </fieldset>
 
+        <div class="catalog-filter-button-container">
           <button class="button catalog-filter-button" type="submit">Применить</button>
           <button class="button catalog-filter-button delete-button" type="reset">Сбросить</button>
+        </div>
 
         </form>
       </div>
+    </div>
 
+    <div class="catalog-container">
+      <div class="catalog-sorting-container">
         <p class="catalog-filter-result">Найдено гостиниц: 38</p>
 
         <select class="select-control" aria-label="Сортировка">
@@ -150,6 +156,7 @@
         <button class="button listing-type-button" href="#">
           <span class="visually-hidden">Показать список</span>
         </button>
+      </div>
 
         <ul class="product-list">
           <li class="product-card">
@@ -224,6 +231,7 @@
         </ul>
 
       </section>
+      </div>
 
       <section class="mailing">
         <h2 class="visually-hidden">Подписка на рассылку</h2>

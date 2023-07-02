@@ -45,9 +45,8 @@
       </nav>
     </header>
 
-    <main class="main-index">
-      <div class="main-container">
-        <div class="main-decor"></div>
+    <main class="main-container main-index">
+      <div class="main-index-container">
       <h1 class="visually-hidden">Город Седона</h1>
       <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону.">
       </div>
@@ -60,26 +59,30 @@
         <p class="advantages-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ul class="advantages-list">
-          <li class="advantages-item">
-            <h3 class="advantages-title-item">Настоящий городок</h3>
+          <li class="advantages-item-town">
+            <div class="advantages-item-town-container">
+            <h3 class="advantages-title-item advantages-title-item-town">Настоящий городок</h3>
             <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <img class="advantages-image" src="images/advantage/town.jpg" width="800" height="385" alt="Вид на город.">
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item-square">
             <h3 class="advantages-title-item">Небольшая площадь</h3>
             <p class="advantages-item-description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item-road">
             <h3 class="advantages-title-item">Красивая дорога</h3>
             <p class="advantages-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item-tourists">
             <h3 class="advantages-title-item">Мало туристов</h3>
             <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li class="advantages-item">
-            <h3 class="advantages-title-item">Там есть Мост дьявода</h3>
+          <li class="advantages-item-bridge">
+            <div class="advantages-item-bridge-container">
+            <h3 class="advantages-title-item advantages-title-item-bridge">Там есть Мост дьявода</h3>
             <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
             <img class="advantages-image" src="images/advantage/bridge.jpg" width="800" height="385" alt="Вид на мост.">
           </li>
         </ul>
@@ -92,7 +95,7 @@
         <p class="recommendations-description">Опытный персонал и качественное обслуживание!</p>
       </div>
         <ul class="recommendations-list">
-          <li class="recommendations-item">
+          <li class="recommendations-item recommendations-item-house">
             <h3 class="recommendations-title-item">Жильё</h3>
             <p class="recommendations-item-description">Рекомендуем пожить в настоящем мотеле,
               всё как в кино!</p>
@@ -102,7 +105,7 @@
             <p class="recommendations-item-description">Всегда заказывайте
               топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="recommendations-item">
+          <li class="recommendations-item recommendations-item-souvenir">
             <h3 class="recommendations-title-item">Сувениры</h3>
             <p class="recommendations-item-description">Не только китайского,
               но и настоящего местного производства!</p>
@@ -117,9 +120,9 @@
         <button class="button hotel-search-button" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
-      <section class="mailing mailing-main">
+      <section class="mailing mailing-index">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p class="mailing-title">Подпишитесь на рассылку</p>
+        <p class="mailing-title mailing-title-index">Подпишитесь на рассылку</p>
         <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="mailing-email">Email</label>
@@ -128,7 +131,7 @@
         </form>
       </section>
 
-      </main>
+    </main>
 
       <footer class="page-footer">
         <ul class="footer-social-list">
