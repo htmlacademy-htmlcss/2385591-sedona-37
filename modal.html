@@ -70,12 +70,12 @@
       </header>
 
       <main class="main-container" data-test="main">
-        <section class="section-intro" data-test="hero">
+        <section class="section-intro">
           <h1 class="visually-hidden">Город Седона</h1>
           <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону.">
         </section>
 
-        <section class="section-advantages" data-test="advantages">
+        <section class="section-advantages">
           <header class="section-advantages-header">
             <h2 class="visually-hidden">Преимущества</h2>
             <p class="section-advantages-title title-h2">Седона — небольшой городок в Аризоне,
@@ -90,7 +90,7 @@
             </li>
 
             <li class="advantages-item advantages-item-frame column-by-2">
-              <img loading="lazy" class="advantages-item-image" src="images/advantage/town.jpg" width="800" height="385"
+              <img class="advantages-item-image" src="images/advantage/town.jpg" width="800" height="385"
                 alt="Вид на город.">
             </li>
 
@@ -110,12 +110,12 @@
             </li>
 
             <li class="advantages-item advantages-item-frame column-by-2">
-              <img loading="lazy" class="advantages-item-image" src="images/advantage/bridge.jpg" width="800"
-                height="385" alt="Вид на мост.">
+              <img class="advantages-item-image" src="images/advantage/bridge.jpg" width="800" height="385"
+                alt="Вид на мост.">
             </li>
 
             <li class="advantages-item advantages-item-primary">
-              <h3 class="advantages-item-title title-h3">Там есть <br> Мост дьявола</h3>
+              <h3 class="advantages-item-title title-h3">Там есть <br> Мост дьявода</h3>
               <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </li>
           </ul>
@@ -164,7 +164,9 @@
             <h2 class="visually-hidden">Поиск гостиницы</h2>
             <p class="section-hotel-search-title title-h2">Заинтересовались?</p>
             <p class="section-hotel-search-description">Укажите предполагаемые даты поездки, <br> и мы покажем вам
-              лучшие предложения гостиниц в Седоне</p>
+              лучшие
+              предложения
+              гостиниц в Седоне</p>
           </header>
 
           <button type="button" class="button button-large">Поиск гостиницы в Седоне</button>
@@ -249,7 +251,7 @@
     </div>
 
     <!-- Модальное окно  -->
-    <div class="modal">
+    <div class="modal modal-open" data-test="modal">
       <div class="modal-dialog">
         <div class="modal-header">
           <h2 class="modal-title title-h2">Поиск гостиницы в Седоне</h2>
