@@ -22,20 +22,24 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   min-height: 100%;
-  margin: auto;
-  background: #fff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  font-family: "PT Sans", Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: #333;
+  color: #333333;
 }
 
-/* Растяжение основной части/липкий футер */
-.main-container {
+/* Обертка */
+.wrapper {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Ограничение по ширине основного контента */
@@ -115,7 +119,7 @@ body {
   line-height: 24px;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .header-navigation-link:hover,
@@ -131,6 +135,12 @@ body {
 /* Активная ссылка навигации */
 .header-navigation-link-current {
   border-bottom-color: #756157;
+}
+
+/* Иконка в навигации */
+.header-navigation-icon {
+  position: relative;
+  top: 5px;
 }
 
 /* Позиционирование значка в навигации */
@@ -165,14 +175,14 @@ body {
 .title-h1 {
   font-size: 60px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   line-height: 78px;
 }
 
 .title-h2 {
   font-size: 30px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   line-height: 36px;
   text-transform: uppercase;
 }
@@ -180,35 +190,21 @@ body {
 .title-h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   line-height: 28px;
 }
 
 .title-h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #333;
+  color: #000000;
   line-height: 24px;
-}
-
-.title-h5 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-  line-height: 22px;
-}
-
-.title-h6 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  line-height: 20px;
 }
 
 /* Ссылки */
 .link {
   outline: none;
-  color: #000;
+  color: #000000;
 }
 
 .link:hover,
@@ -258,6 +254,7 @@ body {
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -310,6 +307,7 @@ body {
   position: relative;
   display: inline-flex;
   gap: 16px;
+  max-width: 150px;
 }
 
 .form-checkbox:hover {
@@ -322,6 +320,7 @@ body {
   display: block;
   -webkit-appearance: none;
   appearance: none;
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin: 0;
@@ -374,6 +373,7 @@ body {
   position: relative;
   display: inline-flex;
   gap: 16px;
+  max-width: 150px;
 }
 
 .form-radio:hover {
@@ -386,6 +386,7 @@ body {
   display: block;
   -webkit-appearance: none;
   appearance: none;
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin: 0;
@@ -419,7 +420,7 @@ body {
   height: 50%;
   margin: auto;
   border-radius: 50%;
-  background-color: currentColor;
+  background-color: currentcolor;
   content: "";
 }
 
@@ -448,8 +449,9 @@ body {
   background-image: url("../images/filter/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 14px) center;
+  font-family: inherit;
   background-size: 20px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 21px;
 }
 
@@ -461,8 +463,8 @@ body {
 
 .form-select-input:disabled {
   opacity: 0.3;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid #000000;
+  color: #000000;
 }
 
 /*
@@ -501,7 +503,7 @@ body {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  color: #000;
+  color: #000000;
 }
 
 /* Обертка для слайдера диапазона */
@@ -520,7 +522,7 @@ body {
   left: 0;
   right: 23.5%;
   width: unset;
-  background-color: #fff;
+  background-color: #ffffff;
   content: "";
 }
 
@@ -536,7 +538,7 @@ body {
   height: 20px;
   border: none;
   border-radius: 4px;
-  background: #fff;
+  background: #ffffff;
 }
 
 .range-slider-handle:focus {
@@ -560,7 +562,7 @@ body {
   border: none;
   border-radius: 4px;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -573,7 +575,7 @@ body {
 .button:hover,
 .button:focus {
   background-color: #615048;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button:active {
@@ -587,13 +589,13 @@ body {
 .button:focus:disabled,
 .button:active:disabled {
   background-color: #e5e5e5;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Секондери вид кнопки */
 .button-secondary {
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button-secondary:hover,
@@ -625,7 +627,7 @@ body {
 .button-transparent:active,
 .button-transparent:disabled {
   background-color: transparent;
-  color: currentColor;
+  color: currentcolor;
 }
 
 .button-transparent:hover {
@@ -678,6 +680,7 @@ body {
 
 .button-close:hover,
 .button-close:focus {
+  outline: none;
   background-color: #e6e6e6;
 }
 
@@ -715,7 +718,7 @@ body {
   position: absolute;
   z-index: 9;
   left: 50%;
-  background-color: #333;
+  background-color: #333333;
   content: "";
 }
 
@@ -727,7 +730,7 @@ body {
   padding: 22px 20px;
   border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
   line-height: 20px;
   text-align: left;
@@ -781,8 +784,9 @@ body {
 
 .counter-button:hover,
 .counter-button:focus {
+  outline: none;
   opacity: 1;
-  color: #000;
+  color: #000000;
 }
 
 .counter-button:focus:active {
@@ -862,13 +866,13 @@ body {
 }
 
 .breadcrumbs .breadcrumbs-link {
-  color: currentColor;
+  color: currentcolor;
 }
 
 .breadcrumbs .breadcrumbs-link:hover,
 .breadcrumbs .breadcrumbs-link:focus,
 .breadcrumbs .breadcrumbs-link:active {
-  color: currentColor;
+  color: currentcolor;
 }
 
 .breadcrumbs .breadcrumbs-link:hover,
@@ -889,7 +893,7 @@ body {
   padding: 0 3px;
   border-radius: 50px;
   background-color: #7db54f;
-  color: #fff;
+  color: #ffffff;
   font-size: 10px;
   line-height: 20px;
   text-align: center;
@@ -924,7 +928,7 @@ body {
   flex-direction: column;
   gap: 26px;
   max-width: 680px;
-  margin: 68px auto 88px;
+  margin: 70px auto 88px;
 }
 
 /* Обнуление отступов у заголовка и описания преимуществ */
@@ -995,7 +999,7 @@ body {
   max-width: 60px;
   height: 2px;
   margin: 30px auto 0;
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   content: "";
 }
 
@@ -1007,11 +1011,11 @@ body {
 /* Синий элемент преимуществ */
 .advantages-item-primary {
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
 }
 
 .advantages-item-primary .advantages-item-title {
-  color: currentColor;
+  color: currentcolor;
 }
 
 .advantages-item-primary .advantages-item-title::after {
@@ -1192,11 +1196,11 @@ body {
 .section-mailing-with-background {
   background-color: #82b3d3;
   background-image: url("../images/background-mailing.jpg");
-  color: #fff;
+  color: #ffffff;
 }
 
 .section-mailing-with-background .section-mailing-title {
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* Форма поиска отелей */
@@ -1222,7 +1226,7 @@ body {
   background-image: url("../images/catalog-filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
 }
 
 .section-catalog-intro-header {
@@ -1231,7 +1235,7 @@ body {
 
 .section-catalog-intro-title {
   margin: 0;
-  color: currentColor;
+  color: currentcolor;
 }
 
 /*
@@ -1245,6 +1249,7 @@ body {
 
 /* Группа фильтра */
 .filter-group {
+  max-width: 290px;
   margin: 0;
   padding: 0;
   border: none;
@@ -1259,7 +1264,7 @@ body {
 .filter-title {
   margin: 0 0 32px;
   padding: 0;
-  color: currentColor;
+  color: currentcolor;
   text-transform: capitalize;
 }
 
@@ -1278,17 +1283,12 @@ body {
   display: inline-flex;
 }
 
-/* Ограничение ширины диапазона цены в фильтре */
-.filter-range-block {
-  max-width: 290px;
-}
-
 /* Действия в фильтре */
 .filter-actions-list {
   display: flex;
   flex-direction: column;
   min-width: 150px;
-  gap: 30px;
+  gap: 32px;
   margin: 55px 0 0;
   padding: 0;
   list-style: none;
@@ -1297,8 +1297,8 @@ body {
 /* Кнопка действия в фильтре */
 .filter-action {
   width: 100%;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*
@@ -1309,7 +1309,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 70px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .catalog-settings-title {
@@ -1343,14 +1343,14 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   background-color: transparent;
-  color: #000;
+  color: #000000;
 }
 
 .catalog-view-button:hover,
 .catalog-view-button:active,
 .catalog-view-button:focus:active,
 .catalog-view-button.is-active {
-  border-color: #000;
+  border-color: #000000;
 }
 
 .catalog-view-button:focus {
@@ -1438,7 +1438,7 @@ body {
 
 /* Ссылка в карточке отеля */
 .card-product-link {
-  color: currentColor;
+  color: currentcolor;
   text-decoration: none;
 }
 
@@ -1536,14 +1536,15 @@ body {
 /* Выбранная ссылка пагинации */
 .pagination-link.pagination-link-current {
   background-color: #f2f2f2;
-  color: #000;
+  color: #000000;
 }
 
 /*
   Футер
 */
 .footer-box {
-  padding: 48px 0 34px;
+  margin-top: auto;
+  padding: 46px 0 34px;
 }
 
 /* Разметка футера */
@@ -1602,17 +1603,17 @@ body {
   top: 0;
   left: 0;
   display: none;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   padding: 15px;
   background-color: rgba(242, 242, 242, 0.8);
-
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Открытое модальное окно */
 .modal.modal-open {
   display: flex;
+  flex-direction: column;
 }
 
 /* Обертка для контента в модальном окне */
@@ -1623,7 +1624,7 @@ body {
   margin: auto;
   padding: 64px 70px;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
