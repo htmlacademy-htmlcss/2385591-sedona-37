@@ -16,7 +16,6 @@
 
 html {
   height: 100%;
-  background-color: #f2f2f2;
 }
 
 body {
@@ -24,7 +23,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  background: #ffffff;
+  background-color: #f2f2f2;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -42,26 +41,16 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Ограничение по ширине основного контента */
-.container {
-  max-width: 1060px;
-  margin: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /*
   Шапка
 */
 .header-box {
   position: relative;
   z-index: 1;
-}
-
-/* Разметка шапки */
-.header-layout {
   display: flex;
   gap: 45px;
+  width: 1060px;
+  margin: auto;
 }
 
 /* Блок логотипа в шапке */
@@ -668,6 +657,7 @@ body {
 /* Кнопка закрытия */
 .button-close {
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -691,6 +681,20 @@ body {
 .button-close:active {
   box-shadow: none;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.button-close::before {
+  display: block;
+  width: 15px;
+  height: 14px;
+  background-image: url("../images/modal/close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+.button-close:active::before {
+  opacity: 0.3;
 }
 
 /* Подсказка */
@@ -884,6 +888,15 @@ body {
   opacity: 0.3;
 }
 
+.breadcrumbs .breadcrumbs-link-home {
+  width: 13px;
+  height: 12px;
+  background-image: url("../images/breadcrumbs/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 /* Значек */
 .badge {
   box-sizing: border-box;
@@ -961,29 +974,8 @@ body {
   justify-content: center;
   gap: 30px;
   min-height: 385px;
-  padding: 80px 85px;
+  padding: 80px 80px;
   text-align: center;
-}
-
-.advantages-item.column-by-2 {
-  /* Ячейка будет занимать 2 колонки */
-  grid-column: span 2;
-}
-
-/* Элемент преимуществ с изображением */
-.advantages-item-frame {
-  padding: 0;
-}
-
-/* Вписываем изображение в выделенное место */
-.advantages-item-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 /* Заголовок элемента преимуществ */
@@ -1030,6 +1022,49 @@ body {
 /* Светло-голубой элемент преимуществ */
 .advantages-item-tertiary {
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Колонка во всю ширину */
+.advantages-item-fluid {
+  grid-column: span 3;
+  display: grid;
+  grid-template-areas:
+    "title image image"
+    "description image image";
+  padding: 80px 0;
+  gap: 30px 0;
+}
+
+/* Реверсивная колонка во всю ширину */
+.advantages-item-fluid-reverse {
+  grid-template-areas:
+    "image image title"
+    "image image description";
+}
+
+/* Отступы для заголовка/описания в элементе во всю ширину */
+.advantages-item-fluid .advantages-item-title,
+.advantages-item-fluid .advantages-item-description {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Прижимаем заголовок к нижней части в элементе во всю ширину */
+.advantages-item-fluid .advantages-item-title {
+  grid-area: title;
+  align-self: flex-end;
+}
+
+/* Описание в элементе во всю ширину */
+.advantages-item-fluid .advantages-item-description {
+  grid-area: description;
+}
+
+/* Изображение в элементе во всю ширину */
+.advantages-item-fluid .advantages-item-image {
+  grid-area: image;
+  margin-top: -80px;
+  margin-bottom: -80px;
 }
 
 /*
@@ -1221,7 +1256,7 @@ body {
   Каталог
 */
 .section-catalog-intro {
-  padding: 35px 0 72px;
+  padding: 35px 70px 72px;
   background-color: #82b3d3;
   background-image: url("../images/catalog-filter.jpg");
   background-repeat: no-repeat;
@@ -1284,7 +1319,7 @@ body {
 }
 
 /* Действия в фильтре */
-.filter-actions-list {
+.filter-actions-block {
   display: flex;
   flex-direction: column;
   min-width: 150px;
@@ -1346,6 +1381,24 @@ body {
   color: #000000;
 }
 
+.button-cards {
+  background-image: url("../images/listing-types/cards.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-block {
+  background-image: url("../images/listing-types/block.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-list {
+  background-image: url("../images/listing-types/list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .catalog-view-button:hover,
 .catalog-view-button:active,
 .catalog-view-button:focus:active,
@@ -1362,6 +1415,8 @@ body {
 */
 .catalog-products {
   padding: 50px 0 60px;
+  width: 1060px;
+  margin: auto;
 }
 
 /* Сетка товаров */
@@ -1374,16 +1429,8 @@ body {
   list-style: none;
 }
 
-/* Одинаковая высота ячеек товаров */
-.product-list .product-item {
-  display: flex;
-  flex-direction: column;
-}
-
-/*
-  Карточки отелей
-*/
-.card-product {
+/* Карточка товара */
+.product-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
@@ -1394,12 +1441,12 @@ body {
 }
 
 /* Обнуление отступов браузера для параграфов */
-.card-product p {
+.product-item p {
   margin: 0;
 }
 
 /* Резервируем место для изображения отеля */
-.card-product-thumbnail {
+.product-item-thumbnail {
   position: relative;
   margin: 0;
   padding: 70.5% 0 0;
@@ -1407,7 +1454,7 @@ body {
 }
 
 /* Растягиваем ссылку изображения отеля на всю ширину/высоту */
-.card-product-thumbnail .card-product-link {
+.product-item-thumbnail .product-item-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -1415,12 +1462,12 @@ body {
   height: 100%;
 }
 
-.card-product-thumbnail .card-product-link:focus {
+.product-item-thumbnail .product-item-link:focus {
   opacity: 0.9;
 }
 
 /* Вписываем изображение отеля в выделенную область */
-.card-product-media {
+.product-item-media {
   position: absolute;
   top: 0;
   left: 0;
@@ -1431,31 +1478,31 @@ body {
 }
 
 /* Заголовок в карточке отеля */
-.card-product-title {
+.product-item-title {
   grid-column: span 2;
   margin: 0;
 }
 
 /* Ссылка в карточке отеля */
-.card-product-link {
+.product-item-link {
   color: currentcolor;
   text-decoration: none;
 }
 
 /* Стоимость проживания в карточке отеля */
-.card-product-price {
+.product-item-price {
   text-align: right;
 }
 
 /* Кнопка действия в карточке отеля */
-.card-product-action {
+.product-item-action {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* Звезды в карточке отеля */
-.card-product-stars {
+.product-item-stars {
   align-self: center;
   width: 18px;
   height: 18px;
@@ -1469,27 +1516,27 @@ body {
 }
 
 /* 2х звездочный отель */
-.card-product-stars-2 {
+.product-item-stars-2 {
   width: 42px;
 }
 
 /* 3х звездочный отель */
-.card-product-stars-3 {
+.product-item-stars-3 {
   width: 65px;
 }
 
 /* 4х звездочный отель */
-.card-product-stars-4 {
+.product-item-stars-4 {
   width: 90px;
 }
 
 /* 5и звездочный отель */
-.card-product-stars-5 {
+.product-item-stars-5 {
   width: 112px;
 }
 
 /* Рейтинг в карточке отеля */
-.card-product-rate {
+.product-item-rate {
   padding: 8px 5px;
   border-radius: 4px;
   background-color: #f2f2f2;
@@ -1543,15 +1590,12 @@ body {
   Футер
 */
 .footer-box {
-  margin-top: auto;
+  margin: auto;
   padding: 46px 0 34px;
-}
-
-/* Разметка футера */
-.footer-layout {
   display: flex;
   justify-content: space-between;
   gap: 70px;
+  width: 1060px;
 }
 
 /* Соц сети */
@@ -1687,7 +1731,7 @@ body {
 }
 
 /* Лейбл в форме резервирования */
-.form-reservation .form-label-column .form-label {
+.form-reservation .form-label {
   display: inline-flex;
   align-items: center;
   min-height: 48px;
